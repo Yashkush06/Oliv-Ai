@@ -1,0 +1,43 @@
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/*.egg-info/
+backend/.pytest_cache/
+*.pyc
+*.pyo
+
+# Environment & secrets
+.env
+backend/.env
+backend/**/.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Oliv AI user data (not source)
+~/.oliv-ai/
+
+# Test output & debug logs
+backend/*.txt
+backend/test_*.py
+backend/check_logs.py
+backend/create_pdf.py
+backend/dump_wa.py
+*.pdf
+
+# Antigravity / Gemini agent data
+.gemini/
+.antigravityignore
