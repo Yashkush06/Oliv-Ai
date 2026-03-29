@@ -235,7 +235,7 @@ export default function Dashboard() {
         {/* Header */}
         <div style={{ padding: '24px 32px', borderBottom: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
-            <h2 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 600 }}>Command Center</h2>
+            <h2 style={{ margin: 0, fontSize: '1.8rem', fontWeight: 700, color: 'var(--secondary)' }}>Command Center</h2>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '4px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <div style={{
@@ -357,7 +357,7 @@ export default function Dashboard() {
         </div>
 
         {/* Input Area */}
-        <div style={{ padding: '32px', borderTop: '1px solid var(--border-color)', background: 'var(--bg-dark)' }}>
+        <div style={{ padding: '32px', borderTop: '1px solid var(--border-color)', background: 'var(--bg-main)' }}>
           <form onSubmit={handleSubmit} style={{ position: 'relative' }}>
             <div style={{
               position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)',
@@ -409,7 +409,7 @@ export default function Dashboard() {
       </div>
 
       {/* Right Sidebar - Activity Log */}
-      <div style={{ width: '380px', borderLeft: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', background: 'var(--bg-dark)' }}>
+      <div style={{ width: '380px', borderLeft: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', background: 'var(--bg-main)' }}>
         <div style={{ padding: '24px', borderBottom: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: 600 }}>Live Activity</h3>
           <Cpu size={16} color="var(--text-muted)" />

@@ -137,7 +137,7 @@ export default function Settings() {
                   fetchOllamaModels();
                 }
               }}
-              style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-dark)', color: 'white', border: '1px solid var(--border-color)' }}
+              style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-surface)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}
             >
               <option value="ollama">Local / Cloud (Ollama)</option>
               <option value="gemini">Google Gemini</option>
@@ -155,7 +155,7 @@ export default function Settings() {
                   <select
                     value={mconf.model || ''}
                     onChange={e => updateModelConfig('model', e.target.value)}
-                    style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-dark)', color: 'white', border: '1px solid var(--border-color)' }}
+                    style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-surface)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}
                   >
                     {ollamaModels.map(m => <option key={m} value={m}>{m}</option>)}
                   </select>
@@ -165,7 +165,7 @@ export default function Settings() {
                     value={mconf.model || ''}
                     onChange={e => updateModelConfig('model', e.target.value)}
                     placeholder={ollamaLoading ? 'Loading models…' : 'e.g. qwen2.5:7b  (Ollama not reachable)'}
-                    style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-dark)', color: 'white', border: '1px solid var(--border-color)' }}
+                    style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-surface)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}
                   />
                 )}
               </div>
@@ -176,7 +176,7 @@ export default function Settings() {
                   value={mconf.base_url || 'http://localhost:11434'}
                   onChange={e => updateModelConfig('base_url', e.target.value)}
                   placeholder="http://localhost:11434"
-                  style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-dark)', color: 'white', border: '1px solid var(--border-color)' }}
+                  style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-surface)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}
                 />
                 <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '6px' }}>
                   Use a remote URL for cloud-hosted Ollama instances.
@@ -194,7 +194,7 @@ export default function Settings() {
                   value={mconf.gemini_api_key || ''}
                   onChange={e => updateModelConfig('gemini_api_key', e.target.value)}
                   placeholder="AIza..."
-                  style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-dark)', color: 'white', border: '1px solid var(--border-color)' }}
+                  style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-surface)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}
                 />
                 <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '6px' }}>
                   Get a free key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer" style={{ color: 'var(--primary)' }}>aistudio.google.com/apikey</a>
@@ -205,7 +205,7 @@ export default function Settings() {
                 <select
                   value={mconf.gemini_model || 'gemini-2.0-flash'}
                   onChange={e => { updateModelConfig('gemini_model', e.target.value); updateModelConfig('model', e.target.value); }}
-                  style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-dark)', color: 'white', border: '1px solid var(--border-color)' }}
+                  style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-surface)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}
                 >
                   <option value="gemini-2.0-flash">gemini-2.0-flash (recommended)</option>
                   <option value="gemini-2.0-flash-lite">gemini-2.0-flash-lite (fastest)</option>
@@ -236,7 +236,7 @@ export default function Settings() {
               value={mconf.vision_model || ''}
               onChange={e => updateModelConfig('vision_model', e.target.value || null)}
               placeholder={mconf.provider === 'gemini' ? 'gemini  (auto — uses your Gemini key)' : 'e.g. ollama:llava'}
-              style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-dark)', color: 'white', border: '1px solid var(--border-color)' }}
+              style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-surface)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}
             />
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-end', paddingBottom: '2px' }}>
@@ -258,7 +258,7 @@ export default function Settings() {
             <select 
               value={prefs.approval_mode} 
               onChange={e => updatePref('approval_mode', e.target.value)}
-              style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-dark)', color: 'white', border: '1px solid var(--border-color)' }}
+              style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-surface)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}
             >
               <option value="safe">Safe (Ask for everything)</option>
               <option value="smart">Smart (Ask for risky actions)</option>
@@ -273,7 +273,7 @@ export default function Settings() {
               value={prefs.browser || ''} 
               onChange={e => updatePref('browser', e.target.value)}
               placeholder="e.g. Chrome, Edge (Optional)"
-              style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-dark)', color: 'white', border: '1px solid var(--border-color)' }}
+              style={{ width: '100%', padding: '10px', borderRadius: '8px', background: 'var(--bg-surface)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}
             />
           </div>
         </div>

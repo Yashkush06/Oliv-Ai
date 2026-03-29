@@ -73,10 +73,10 @@ export default function SetupWizard({ onComplete }) {
   };
 
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-dark)' }}>
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-main)' }}>
       
       <div style={{ marginBottom: '40px', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 700, background: 'linear-gradient(to right, #8b5cf6, #d946ef)', WebkitBackgroundClip: 'text', color: 'transparent', marginBottom: '8px' }}>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 700, background: 'linear-gradient(to right, var(--primary), var(--secondary))', WebkitBackgroundClip: 'text', color: 'transparent', marginBottom: '8px' }}>
           Welcome to Oliv AI
         </h1>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>Let's configure your autonomous Windows assistant.</p>
@@ -102,7 +102,7 @@ export default function SetupWizard({ onComplete }) {
                   onClick={() => setProvider('ollama')}
                   style={{ 
                     padding: '24px', borderRadius: '12px', cursor: 'pointer', transition: 'all 0.2s',
-                    background: provider === 'ollama' ? 'rgba(139, 92, 246, 0.1)' : 'var(--bg-surface)',
+                    background: provider === 'ollama' ? 'var(--primary-glow)' : 'var(--bg-surface)',
                     border: `2px solid ${provider === 'ollama' ? 'var(--primary)' : 'var(--border-color)'}`
                   }}
                 >
@@ -115,7 +115,7 @@ export default function SetupWizard({ onComplete }) {
                   onClick={() => setProvider('gemini')}
                   style={{ 
                     padding: '24px', borderRadius: '12px', cursor: 'pointer', transition: 'all 0.2s',
-                    background: provider === 'gemini' ? 'rgba(139, 92, 246, 0.1)' : 'var(--bg-surface)',
+                    background: provider === 'gemini' ? 'var(--primary-glow)' : 'var(--bg-surface)',
                     border: `2px solid ${provider === 'gemini' ? 'var(--primary)' : 'var(--border-color)'}`
                   }}
                 >

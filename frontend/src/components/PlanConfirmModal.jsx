@@ -38,7 +38,7 @@ export default function PlanConfirmModal({ planEvent, onConfirm, onCancel }) {
         </p>
 
         <div style={{ 
-          background: 'var(--bg-dark)', 
+          background: 'var(--bg-surface)', 
           padding: '16px', 
           borderRadius: '8px',
           marginBottom: '24px',

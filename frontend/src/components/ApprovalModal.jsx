@@ -33,7 +33,7 @@ export default function ApprovalModal({ event, onConfirm, onDeny }) {
         </p>
         
         <div style={{ 
-          background: 'var(--bg-dark)', 
+          background: 'var(--bg-surface)', 
           padding: '16px', 
           borderRadius: '8px',
           marginBottom: '24px',

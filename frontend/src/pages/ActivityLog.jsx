@@ -43,10 +43,10 @@ export default function ActivityLog() {
       </div>
 
       <div className="glass-panel" style={{ overflow: 'hidden' }}>
-        <div style={{ background: '#000', padding: '16px', fontFamily: 'monospace', fontSize: '0.85rem', height: 'calc(100vh - 200px)', overflowY: 'auto' }}>
+        <div style={{ background: 'var(--bg-surface-elevated)', padding: '16px', fontFamily: 'monospace', fontSize: '0.85rem', height: 'calc(100vh - 200px)', overflowY: 'auto' }}>
           {logs.map((log, i) => (
             <div key={i} style={{ 
-              marginBottom: '8px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px',
+              marginBottom: '8px', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px',
               display: 'flex', gap: '16px'
             }}>
               <div style={{ color: 'var(--text-muted)', minWidth: '180px' }}>

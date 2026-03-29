@@ -33,11 +33,12 @@ function Navigation() {
       <div style={{ marginBottom: '32px', display: 'flex', alignItems: 'center', gap: '12px' }}>
         <div style={{ 
           width: '32px', height: '32px', 
-          background: 'linear-gradient(135deg, var(--primary), #d946ef)',
-          borderRadius: '8px',
-          boxShadow: '0 0 15px var(--primary-glow)'
-        }}></div>
-        <h1 style={{ fontSize: '1.2rem', fontWeight: 600, letterSpacing: '-0.5px' }}>Oliv AI</h1>
+          background: 'var(--primary)',
+          borderRadius: '50%',
+          boxShadow: '0 4px 10px var(--primary-glow)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '16px'
+        }}>🫒</div>
+        <h1 style={{ fontSize: '1.2rem', fontWeight: 700, letterSpacing: '-0.5px', color: 'var(--text-main)' }}>Oliv AI</h1>
       </div>
 
       {links.map(({ path, label, icon: Icon }) => (
@@ -48,8 +49,10 @@ function Navigation() {
             display: 'flex', alignItems: 'center', gap: '12px',
             padding: '12px',
             borderRadius: '8px',
-            background: location.pathname === path ? 'rgba(255,255,255,0.1)' : 'transparent',
-            color: location.pathname === path ? 'white' : 'var(--text-muted)',
+            background: location.pathname === path ? 'var(--bg-surface)' : 'transparent',
+            color: location.pathname === path ? 'var(--primary)' : 'var(--text-muted)',
+            boxShadow: location.pathname === path ? '0 2px 8px rgba(0,0,0,0.05)' : 'none',
+            fontWeight: location.pathname === path ? 600 : 500,
             border: 'none',
             cursor: 'pointer',
             textAlign: 'left',
@@ -89,7 +92,7 @@ export default function App() {
   }
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: 'var(--bg-dark)' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', background: 'var(--bg-main)' }}>
       <Navigation />
       <main style={{ flex: 1, height: '100vh', overflowY: 'auto' }}>
         <Routes>
