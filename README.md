@@ -20,6 +20,8 @@
 
 ## ✨ What is Oliv AI?
 
+![Oliv AI Dashboard](assets/dashboard.png)
+
 Oliv AI is an **autonomous desktop agent** for Windows. You give it a natural language command — like *"open Chrome and search for flights to Tokyo"* or *"create a new folder on the desktop called Projects"* — and it plans, executes, and verifies each step by actually controlling your mouse, keyboard, and applications.
 
 Unlike chatbots that just generate text, Oliv **takes real action** on your computer:
@@ -180,6 +182,8 @@ Navigate to **http://localhost:5173** — the Setup Wizard will guide you throug
 3. **Set Approval Mode** — Safe, Smart, or Autonomous
 
 ## ⚙️ Configuration
+
+![Settings Panel](assets/settings.png)
 
 Configuration is stored at `~/.oliv-ai/config.json` and managed through the Settings page.
 
